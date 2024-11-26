@@ -9,7 +9,7 @@ services:
       GATEWAY_ADMIN_PASSWORD: seteamdevserver
     labels:
       traefik.enable: "true"
-      traefik.hostname: "eric-test"
+      traefik.hostname: "build-test"
     
     networks:
       - proxy
