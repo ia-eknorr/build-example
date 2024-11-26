@@ -1,0 +1,20 @@
+---
+
+services:
+  gateway:
+    image: localhost:5000/example-ignition:latest
+    pull_policy: always
+    environment:
+      GATEWAY_ADMIN_USERNAME: admin
+      GATEWAY_ADMIN_PASSWORD: seteamdevserver
+    labels:
+      traefik.enable: "true"
+      traefik.hostname: "eric-test"
+    
+    networks:
+      - proxy
+    
+networks:
+  proxy:
+    external: true
+    name: proxy
